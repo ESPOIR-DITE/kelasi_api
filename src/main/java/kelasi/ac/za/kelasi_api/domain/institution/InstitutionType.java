@@ -10,6 +10,9 @@ public class InstitutionType {
     private String typeOfInstitutionId;
     private String description;
 
+    private InstitutionType() {
+    }
+
     public InstitutionType(Builder builder) {
         this.description = builder.description;
         this.institutionId = builder.institutionId;
@@ -41,6 +44,12 @@ public class InstitutionType {
         }
         public Builder buildDescription(String description){
             this.description = description;
+            return this;
+        }
+        public Builder copy(InstitutionType institutionType){
+            this.description = institutionType.description;
+            this.institutionId = institutionType.institutionId;
+            this.typeOfInstitutionId = institutionType.typeOfInstitutionId;
             return this;
         }
         public InstitutionType build(){
