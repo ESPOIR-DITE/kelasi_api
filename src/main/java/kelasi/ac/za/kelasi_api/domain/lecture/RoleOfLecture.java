@@ -1,10 +1,10 @@
 package kelasi.ac.za.kelasi_api.domain.lecture;
 
-public class Role
+public class RoleOfLecture
 {
     private String role, Id;
 
-    private Role(){}
+    private RoleOfLecture(){}
 
     public String getRole() {
         return role;
@@ -14,7 +14,7 @@ public class Role
         return Id;
     }
 
-    public Role(Builder builder){
+    public RoleOfLecture(Builder builder){
         this.Id = builder.Id;
         this.role = builder.role;
     }
@@ -33,8 +33,8 @@ public class Role
             return this;
         }
 
-        public Role build(){
-            return new Role(this);
+        public RoleOfLecture build(){
+            return new RoleOfLecture(this);
         }
     }
 
