@@ -18,6 +18,9 @@ public class Student { //never mind if the className has a red line, it ok!
     private Date dateOdBirth;
     private String phoneNumber;
 
+    private Student() {
+    }
+
     public Student(Builder builder) {
         this.phoneNumber = builder.phoneNumber;
         this.dateOdBirth = builder.dateOdBirth;

@@ -14,5 +14,5 @@ public interface Iservice<T,t> {
     T read(String id);
     boolean delete(T t);
     List<T> reaAll();
-    T getHelp(String id); // This method will help to reduce repetitions
+    T getHelp(String id); // This method will help to reduce repetitions of 'Optional<Type> TypeList = repository.getById(id);'
 }
