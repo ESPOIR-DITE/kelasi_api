@@ -4,17 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class SchoolAdmin {
+public class KelasiAdmin {
     @Id
     private String email;
     private String name;
     private String surname;
     private String phoneNumber;
 
-    private SchoolAdmin() {
+    private KelasiAdmin() {
     }
 
-    public SchoolAdmin(Builder builder) {
+    public KelasiAdmin(Builder builder) {
         this.email = builder.email;
         this.name = builder.name;
         this.phoneNumber = builder.phoneNumber;
@@ -58,8 +58,8 @@ public class SchoolAdmin {
             this.phoneNumber = phoneNumber;
             return this;
         }
-        public SchoolAdmin build(){
-            return new SchoolAdmin(this);
+        public KelasiAdmin build(){
+            return new KelasiAdmin(this);
         }
     }
 }
