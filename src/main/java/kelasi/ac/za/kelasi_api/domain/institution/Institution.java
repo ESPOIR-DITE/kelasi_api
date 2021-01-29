@@ -1,9 +1,11 @@
 package kelasi.ac.za.kelasi_api.domain.institution;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity
 public class Institution {
-
+@Id
     private String id;
     private String name;
     private String slogan;

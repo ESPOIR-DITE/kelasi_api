@@ -1,9 +1,12 @@
 package kelasi.ac.za.kelasi_api.domain.institution;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
-
+@Entity
 public class InstitutionImage {
-
+@Id
+private String id;
     private String institutionId;
     private String imageId;
     private String imageTypeId;
@@ -18,6 +21,11 @@ public class InstitutionImage {
         this.imageId = builder.imageId;
         this.imageTypeId = builder.imageTypeId;
         this.description = builder.description;
+        this.id = builder.id;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getInstitutionId() {
@@ -38,11 +46,15 @@ public class InstitutionImage {
 
     public static class Builder{
 
+        private String id;
         private String institutionId;
         private String imageId;
         private String imageTypeId;
         private String description;
 
+        public Builder(String id){
+            this.id = id;
+        }
         public Builder institutionId(String institutionId) {
             this.institutionId = institutionId;
             return this;

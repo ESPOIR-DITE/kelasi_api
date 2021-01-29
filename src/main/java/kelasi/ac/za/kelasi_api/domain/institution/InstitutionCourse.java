@@ -1,9 +1,13 @@
 package kelasi.ac.za.kelasi_api.domain.institution;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
 import java.util.Objects;
-
+@Entity
 public class InstitutionCourse {
-
+@Id
+private String id;
     private String email;
     private String institutionId;
     private String course;
@@ -20,6 +24,11 @@ public class InstitutionCourse {
         this.course = builder.course;
         this.date = builder.date;
         this.information = builder.information;
+        this.id = builder.id;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getEmail() {
@@ -43,7 +52,7 @@ public class InstitutionCourse {
     }
 
     public static class Builder{
-
+        private String id;
         private String email;
         private String institutionId;
         private String course;
@@ -51,6 +60,9 @@ public class InstitutionCourse {
         private String information;
 
 
+        public Builder(String id){
+            this.id = id;
+        }
         public Builder email(String email) {
             this.email = email;
             return this;
@@ -58,6 +70,10 @@ public class InstitutionCourse {
 
         public Builder institutionId(String institutionId) {
             this.institutionId = institutionId;
+            return this;
+        }
+        public Builder buildId(String id){
+            this.id = id;
             return this;
         }
 
