@@ -59,10 +59,9 @@ private String id;
         private String date;
         private String information;
 
-
-        public Builder(String id){
-            this.id = id;
+        public Builder() {
         }
+
         public Builder email(String email) {
             this.email = email;
             return this;

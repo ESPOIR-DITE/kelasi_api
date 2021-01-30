@@ -10,7 +10,7 @@ public class DocumentType {
     private String name;
     private String description;
 
-    private DocumentType() {
+    public DocumentType() {
     }
 
     public DocumentType(Builder builder) {
@@ -35,8 +35,9 @@ public class DocumentType {
         private String name;
         private String description;
 
-        public Builder(String id){
+        public Builder buildId(String id){
             this.id = id;
+            return this;
         }
         public Builder buildName(String name){
             this.name = name;
