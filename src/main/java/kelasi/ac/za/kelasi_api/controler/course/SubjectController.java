@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("kelasi/course/")
+@RequestMapping("kelasi/subject/")
 public class SubjectController implements Icontroller<Subject,String> {
     @Autowired
     private SubjectService subjectService;

@@ -1,8 +1,13 @@
 package kelasi.ac.za.kelasi_api.domain.lecture;
 
-public class LectureInstitution
-{
-    private String email, subject, description, institution, date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class LectureInstitution {
+    @Id
+    private String email;
+    private String  subject, description, institution, date;
 
 
     private LectureInstitution(){}

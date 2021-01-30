@@ -1,10 +1,19 @@
 package kelasi.ac.za.kelasi_api.domain.lecture;
 
-public class LectureRole
-{
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class LectureRole {
+    @Id
+    private String id;
     private String roleId, email, date;
 
-    private LectureRole(){}
+    public LectureRole(){}
+
+    public String getId() {
+        return id;
+    }
 
     public String getRoleId() {
         return roleId;
@@ -23,10 +32,12 @@ public class LectureRole
         this.email = builder.email;
         this.roleId = builder.roleId;
         this.date = builder.date;
+        this.id = builder.id;
     }
 
     public static class Builder
     {
+        private String id;
         private String roleId, email, date;
 
         public Builder email(String email){
@@ -34,6 +45,10 @@ public class LectureRole
             return this;
         }
 
+        public Builder buildId(String id){
+            this.id = id;
+            return this;
+        }
         public Builder roleId(String roleId){
             this.roleId = roleId;
             return this;

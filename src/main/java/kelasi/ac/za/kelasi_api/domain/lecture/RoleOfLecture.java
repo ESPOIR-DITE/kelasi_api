@@ -1,21 +1,26 @@
 package kelasi.ac.za.kelasi_api.domain.lecture;
 
-public class RoleOfLecture
-{
-    private String role, Id;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-    private RoleOfLecture(){}
+@Entity
+public class RoleOfLecture {
+    @Id
+    private String id;
+    private String role;
+
+    public RoleOfLecture(){}
 
     public String getRole() {
         return role;
     }
 
     public String getId() {
-        return Id;
+        return id;
     }
 
     public RoleOfLecture(Builder builder){
-        this.Id = builder.Id;
+        this.id = builder.Id;
         this.role = builder.role;
     }
 
@@ -40,6 +45,6 @@ public class RoleOfLecture
 
     @Override
     public String toString() {
-        return "Role{" + "role='" + role + '\'' + ", Id='" + Id + '\'' + '}';
+        return "Role{" + "role='" + role + '\'' + ", Id='" + id + '\'' + '}';
     }
 }
