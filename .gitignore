@@ -32,3 +32,4 @@ build/
 
 ### My ignor files
 src/main/resources/application.yml
+src/main/java/kelasi/ac/za/kelasi_api/Configuration/SecurityConfiguration.java
