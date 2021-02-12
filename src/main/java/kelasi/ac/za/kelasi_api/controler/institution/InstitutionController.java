@@ -36,6 +36,7 @@ public class InstitutionController implements Icontroller<Institution,String> {
         return institutionService.delete(institution);
     }
 
+    @GetMapping("reads")
     @Override
     public List<Institution> reaAll() {
         return institutionService.reaAll();

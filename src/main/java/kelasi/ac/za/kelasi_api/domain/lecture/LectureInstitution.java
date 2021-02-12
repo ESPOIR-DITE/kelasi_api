@@ -6,11 +6,16 @@ import javax.persistence.Id;
 @Entity
 public class LectureInstitution {
     @Id
+    private String id;
     private String email;
     private String  subject, description, institution, date;
 
 
     private LectureInstitution(){}
+
+    public String getId() {
+        return id;
+    }
 
     public String getEmail() {
         return email;
@@ -39,14 +44,19 @@ public class LectureInstitution {
         this.subject = builder.subject;
         this.email = builder.email;
         this.date = builder.date;
+        this.id = builder.id;
     }
 
     public static class Builder
     {
-        private String email, subject, description, institution, date;
+        private String email, id, subject, description, institution, date;
 
         public Builder description(String description){
             this.description = description;
+            return this;
+        }
+        public Builder buildId(String id){
+            this.id = id;
             return this;
         }
 

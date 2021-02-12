@@ -36,6 +36,7 @@ public class InstitutionImageController implements Icontroller<InstitutionImage,
         return institutionImageService.delete(institution);
     }
 
+    @GetMapping("reads")
     @Override
     public List<InstitutionImage> reaAll() {
         return institutionImageService.reaAll();
